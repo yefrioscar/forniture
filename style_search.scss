@@ -1,0 +1,147 @@
+body  {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height:100vh;
+    background: linear-gradient(to right,#3564E3,#3BA6D5);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(187, 187, 187, 0.8);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(187, 187, 187, 0.8);
+}
+
+.container-filtro {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 95%;
+    height:95%;
+    max-height: 1000px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 3px 20px 0px rgba(0,0,0,.16);
+    padding: 1em 2em;
+    overflow-y: scroll;
+
+}
+
+.search {
+    color: #3988DC;
+    fill: #3988DC;
+}
+
+.header-container {
+   margin-bottom: 2em;
+}
+
+.items-filtro {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+
+.item-in-search {
+    margin: 20px;
+    box-shadow: none;
+    transition: all .25s cubic-bezier(0.59, -0.42, 0.89, 1.47);
+
+
+    &:hover {
+
+        box-shadow: 0px 6px 20px 0px rgba(0,0,0,.16);
+    }
+}
+
+.addCar_search {
+        
+        background: linear-gradient(to right,#3564E3,#3BA6D5);
+
+}
+
+.search {
+
+    &-title {
+       margin-bottom: .5em;
+        
+
+    }
+
+    &-img {
+        margin-bottom: .5em;
+
+    }
+
+    &-descripcion {
+
+    }
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+.categoria {
+
+    &-container {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-title {
+        width: 100%;
+        font-size: 25px;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    &-items {
+        width: 100%;
+        display: flex;
+        flex-grow: 2;
+        justify-content: space-around;
+    }
+
+    &-item {        
+        flex-grow: 1;
+        border:1px solid #efefef;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        margin-left: 10px;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: 700;
+        cursor:pointer;
+        transition: all .30s cubic-bezier(0.53, -0.48, 0.55, 1.47);
+
+        &.active {
+            flex-grow: 10;
+            border:none;
+            color: white;
+            background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+            box-shadow: 0px 3px 6px 0px rgba(0,0,0,.16);
+
+        }
+    }
+}
+  
+
