@@ -15,7 +15,13 @@ for(var i=0;i<le;i++){
     });
 }
 
-
+function hasParentClass( e, classname ) {
+		if(e === document) return false;
+		if( classie.has( e, classname ) ) {
+			return true;
+		}
+		return e.parentNode && hasParentClass( e.parentNode, classname );
+	}
 
 
 
@@ -32,7 +38,8 @@ if(inputSearch.value.length > 1) {
     }
 }
 
-inputSearch.addEventListener('keyup',()=> {
+inputSearch.addEventListener('keyup',(e)=> {
+    e.preventDefault();
     sg.classList.add('activeSvg');
 
     if(inputSearch.value.length == 0) {
@@ -41,7 +48,8 @@ inputSearch.addEventListener('keyup',()=> {
 });
 
 
-sg.addEventListener('click',()=> {
+sg.addEventListener('click',(e)=> {
+    e.preventDefault();
     inputSearch.value = '';
 })
 bag
@@ -52,4 +60,27 @@ bag.addEventListener('click', function(){
     var container = document.getElementsByClassName('container-filtro')[0];
 
     container.classList.toggle('active');
+});
+
+var login = document.getElementsByClassName('login')[0];
+var signup = document.getElementsByClassName('signup')[0];
+var loginclick = document.getElementById('login_click');
+var signupclick = document.getElementById('signup_click');
+
+loginclick.addEventListener('click',function(){
+    if(hasParentClass(signup,'active')) {
+        signup.classList.remove('active');
+    }
+    login.classList.toggle('active');
+    
+    console.log('penejo');
+});
+
+signupclick.addEventListener('click',function(){
+    if(hasParentClass(login,'active')) {
+        login.classList.remove('active');
+    }
+    signup.classList.toggle('active');
+        console.log('penejo');
+
 });

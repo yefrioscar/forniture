@@ -405,8 +405,9 @@ body  {
     top: 50px;
     z-index: 5000;
     border-radius: 5px;
-    box-shadow: 0px 5px 10px 0px rgba(0,0,0,.16);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,.16);
     padding: 20px;
+    
  //   border:1px solid #d0d0d0;
     &__item {
         width: 100%;
@@ -444,6 +445,28 @@ body  {
         }
     }
 }
+
+
+.login {
+    display: none;
+    cursor: pointer;
+    &.active {
+        display: block;
+    }
+}
+
+
+
+
+.signup {
+    display: none;
+    cursor: pointer;
+    right: -30px;
+    &.active {
+        display: block;
+    }
+}
+
 
 
 
