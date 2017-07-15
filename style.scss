@@ -34,6 +34,7 @@ body {
     max-height: 750px;
     overflow: hidden;
     background: linear-gradient(to right,#3564E3,#3BA6D5);
+    z-index: 10;
 }
 
 .main_forniture {
@@ -44,12 +45,13 @@ body {
     margin-right: auto;
     padding-top: 2em;
     height: 100%;
+    z-index: 1000;
 }
 
 
 .persona-table {
     width: 50%;
-
+    z-index: -500;
     position: absolute;
     right:-5%;
     bottom: -1%;
@@ -161,19 +163,21 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
+    position: relative;
+    z-index: 1000;
 
 
     &__1 {
         width: $w;
         height: $h;
         background-color:   $search_color;
-
     }
 
     &__2 {
         width: 95%;
         height: 85%;
         background-color:   $search_color_2;
+
     }
 
 

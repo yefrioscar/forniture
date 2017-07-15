@@ -14,3 +14,42 @@ for(var i=0;i<le;i++){
         console.log(items[i]);
     });
 }
+
+
+
+
+
+var sg = document.getElementsByClassName('categorias-input__svg')[0];
+var inputSearch = document.getElementsByClassName('categorias-input__item')[0];
+
+
+
+if(inputSearch.value.length > 1) {
+    sg.classList.add('activeSvg');
+
+    if(inputSearch.value.length == 0) {
+        sg.classList.remove('activeSvg');
+    }
+}
+
+inputSearch.addEventListener('keyup',()=> {
+    sg.classList.add('activeSvg');
+
+    if(inputSearch.value.length == 0) {
+        sg.classList.remove('activeSvg');
+    }
+});
+
+
+sg.addEventListener('click',()=> {
+    inputSearch.value = '';
+})
+bag
+
+var bag = document.getElementsByClassName('bag')[0];
+
+bag.addEventListener('click', function(){
+    var container = document.getElementsByClassName('container-filtro')[0];
+
+    container.classList.toggle('active');
+});
