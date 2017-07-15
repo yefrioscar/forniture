@@ -36,7 +36,7 @@
 			},
 			bodyClickFn = function(evt) {
 				if( !hasParentClass( evt.target, 'st-menu' ) ) {
-					var c = document.getElementsByClassName('container-filtro')[0]
+					var c = document.getElementsByClassName('container-filtro')[0];
 					classie.remove( c, 'active' );
 					resetMenu();
 					document.removeEventListener( eventtype, bodyClickFn );
@@ -53,6 +53,7 @@
 				classie.add( container, effect );
 				setTimeout( function() {
 					classie.add( container, 'st-menu-open' );
+
 				}, 25 );
 				document.addEventListener( eventtype, bodyClickFn );
 			});
